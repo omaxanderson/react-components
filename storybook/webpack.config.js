@@ -12,6 +12,7 @@ module.exports = async ({ config, mode }) => {
             loader: 'css-loader',
             options: {
                sourceMap: isDevelopment,
+               modules: true,
             },
          },
          {
