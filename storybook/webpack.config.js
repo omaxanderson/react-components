@@ -3,7 +3,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = async ({ config, mode }) => {
    const isDevelopment = mode === 'development';
    console.log('isDev', isDevelopment);
-   console.log(JSON.stringify(config, 0, 2));
    config.module.rules.push({
       test: /\.scss/,
       use: [
@@ -31,5 +30,6 @@ module.exports = async ({ config, mode }) => {
       })
    );
 
+   console.log(JSON.stringify(config, 0, 2));
    return config;
 };
