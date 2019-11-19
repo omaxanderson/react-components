@@ -1,0 +1,39 @@
+{
+  "name": "react-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start-storybook -p 6006 -c storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omaxanderson/react-components.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omaxanderson/react-components/issues"
+  },
+  "homepage": "https://github.com/omaxanderson/react-components#readme",
+  "dependencies": {
+    "css-loader": "^3.2.0",
+    "lodash": "^4.17.15",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-info": "^5.2.6",
+    "@storybook/addon-links": "^5.2.6",
+    "@storybook/addons": "^5.2.6",
+    "@storybook/react": "^5.2.6",
+    "babel-loader": "^8.0.6"
+  }
+}
