@@ -1,11 +1,13 @@
 import Button from './Button';
+import Column from './Column';
 import Grid from './Grid';
-import GridColumn from './GridColumn';
+import Row from './Row';
 import Select from './Select';
 
 export {
     Button,
+    Column,
     Grid,
-    GridColumn,
+    Row,
     Select,
 };

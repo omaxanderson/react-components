@@ -1,7 +1,7 @@
 import React from 'react';
-import css from './GridColumn.scss';
+import css from './Column.scss';
 
-class GridColumn extends React.Component {
+class Column extends React.Component {
     render() {
         const {
             children,
@@ -22,4 +22,4 @@ class GridColumn extends React.Component {
     }
 }
 
-export default GridColumn;
+export default Column;
