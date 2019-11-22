@@ -1,0 +1,7 @@
+@mixin col-x-list {
+  @for $i from 1 through 12 {
+    .col-#{$i}-sm { grid-column: span $i; }
+  }
+}
+
+@include col-x-list;

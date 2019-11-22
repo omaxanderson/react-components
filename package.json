@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "start-storybook -p 6006 -c storybook",
     "prepublish": "npm run build",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "start:dev": "watch webpack src/ --interval=3"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "@storybook/addons": "^5.2.6",
     "@storybook/react": "^5.2.6",
     "babel-loader": "^8.0.6",
+    "watch": "^1.0.2",
     "webpack-cli": "^3.3.10"
   }
 }

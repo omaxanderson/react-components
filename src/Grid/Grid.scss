@@ -1,0 +1,8 @@
+$columns: 12;
+$columnGap: 20px;
+
+.Grid {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-column-gap: $columnGap;
+}
