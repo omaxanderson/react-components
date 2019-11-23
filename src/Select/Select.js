@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import css from './Select.scss';
 
 class Select extends React.Component {
@@ -6,16 +7,30 @@ class Select extends React.Component {
        const {
            onChange,
            children,
+           value,
        } = this.props;
       return (
          <select
             className={css.Select}
             onChange={onChange}
+            value={value}
          >
             {children}
          </select>
       );
    }
+}
+
+Select.propTypes = {
+    onChange: propTypes.func,
+    children: propTypes.node,
+    value: propTypes.any,
+};
+
+Select.defaultProps = {
+    onChange: () => {},
+    children: undefined,
+    value: undefined,
 }
 
 export default Select;

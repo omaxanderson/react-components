@@ -1,0 +1,17 @@
+@import '../scss/spacing';
+
+.Median {
+  overflow: auto;
+}
+
+.Median__sm {
+  padding: $spacing-sm;
+}
+
+.Median__md {
+  padding: $spacing-md;
+}
+
+.Median__lg {
+  padding: $spacing-lg;
+}
