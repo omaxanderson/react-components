@@ -8,7 +8,6 @@ class Column extends React.Component {
             col,
             offset,
         } = this.props;
-        console.log('offset', offset);
         return (
             <React.Fragment>
                 {offset && <div className={css[`col-${offset}-sm`]} />}

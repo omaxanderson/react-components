@@ -3,11 +3,16 @@ import css from './Select.scss';
 
 class Select extends React.Component {
    render() {
+       const {
+           onChange,
+           children,
+       } = this.props;
       return (
          <select
             className={css.Select}
+            onChange={onChange}
          >
-            {this.props.children}
+            {children}
          </select>
       );
    }
