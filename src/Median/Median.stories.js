@@ -45,3 +45,14 @@ stories.add('In a grid', () => (
         </Column>
     </Grid>
 ));
+
+stories.add('Vertical Aligned', () => (
+    <Median verticalAlign>
+        <Alpha>
+            <div style={{ height: '100px', width: '100px', backgroundColor: 'red' }} />
+        </Alpha>
+        <Beta>
+            <div style={{ height: '200px', width: '100px', backgroundColor: 'blue' }} />
+        </Beta>
+    </Median>
+));

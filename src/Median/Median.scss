@@ -1,7 +1,11 @@
 @import '../scss/spacing';
 
 .Median {
-  overflow: auto;
+  display: flex;
+
+  &--verticalAlign {
+    align-items: center;
+  }
 }
 
 .Median__sm {

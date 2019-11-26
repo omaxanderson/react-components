@@ -1,0 +1,21 @@
+@import '../scss/spacing';
+
+.TextInput {
+  padding: $spacing-md;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: #7488a5;
+  color: white;
+  transition: .5s;
+
+  &:focus {
+    border: 1px solid #4c6488;
+    background-color: #eeeeee;
+    color: #071b39;
+  }
+
+  &::placeholder {
+    color: #ddeeff;
+  }
+}

@@ -4,6 +4,7 @@ import Grid from './Grid';
 import Row from './Row';
 import Select from './Select';
 import { Median, Alpha, Beta } from './Median';
+import TextInput from './TextInput';
 
 export {
     Button,
@@ -14,4 +15,5 @@ export {
     Median,
     Alpha,
     Beta,
+    TextInput,
 };
