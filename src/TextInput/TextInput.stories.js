@@ -7,3 +7,9 @@ const stories = storiesOf('Components/TextInput', module);
 stories.add('Default', () => (
     <TextInput />
 ));
+
+stories.add('With onsubmit', () => (
+    <TextInput onSubmit={(e) => {
+        console.log('submitted:', e);
+    }}/>
+));
