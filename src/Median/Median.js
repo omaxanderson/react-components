@@ -25,7 +25,7 @@ class Median extends React.Component {
 
 Median.propTypes = {
     children: propTypes.node.isRequired,
-    spacing: propTypes.oneOf(['sm', 'md', 'lg']),
+    spacing: propTypes.oneOf(['sm', 'md', 'lg', 'none']),
     verticalAlign: propTypes.boolean,
 };
 

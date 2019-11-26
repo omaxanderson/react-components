@@ -5,6 +5,7 @@ import Row from './Row';
 import Select from './Select';
 import { Median, Alpha, Beta } from './Median';
 import TextInput from './TextInput';
+import Header from './Header';
 
 export {
     Button,
@@ -16,4 +17,5 @@ export {
     Alpha,
     Beta,
     TextInput,
+    Header,
 };
