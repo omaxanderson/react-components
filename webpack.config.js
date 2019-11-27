@@ -42,7 +42,9 @@ const mainConfig = {
           {
             loader: 'css-loader',
              options: {
-                modules: true,
+                modules: {
+                    localIdentName: '[local]__[hash:base64:6]',
+                },
                 importLoaders: 2,
                 sourceMap: true,
                 url: false,
