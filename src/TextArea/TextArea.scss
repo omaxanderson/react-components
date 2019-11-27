@@ -1,0 +1,20 @@
+@import '../scss/spacing';
+
+.TextArea {
+  outline: none;
+  overflow: auto;
+  border-radius: 4px;
+  border-color: #d4d4d4;
+  transition: .4s;
+  width: 100%;
+  padding: $spacing-md;
+  box-sizing: border-box;
+
+  &--noResize {
+    resize: none;
+  }
+
+  &:focus {
+    border-color: #183155;
+  }
+}

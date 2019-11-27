@@ -5,6 +5,7 @@ import Row from './Row';
 import Select from './Select';
 import { Median, Alpha, Beta } from './Median';
 import TextInput from './TextInput';
+import TextArea from './TextArea';
 import Header from './Header';
 
 export {
@@ -17,5 +18,6 @@ export {
     Alpha,
     Beta,
     TextInput,
+    TextArea,
     Header,
 };

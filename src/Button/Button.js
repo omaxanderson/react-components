@@ -3,10 +3,13 @@ import css from './Button.scss';
 
 class Button extends React.Component {
    render() {
-      console.log(css);
+      const {
+         onClick,
+         children,
+      } = this.props;
       return (
-         <button className={css.Button}>
-            {this.props.children}
+         <button className={css.Button} onClick={onClick}>
+            {children}
          </button>
       )
    }
