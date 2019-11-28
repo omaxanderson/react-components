@@ -1,23 +1,27 @@
 import Button from './Button';
 import Column from './Column';
+import FloatingButton from './FloatingButton';
 import Grid from './Grid';
+import Header from './Header';
+import Icon from './Icon';
 import Row from './Row';
 import Select from './Select';
-import { Median, Alpha, Beta } from './Median';
-import TextInput from './TextInput';
 import TextArea from './TextArea';
-import Header from './Header';
+import TextInput from './TextInput';
+import { Median, Alpha, Beta } from './Median';
 
 export {
-    Button,
-    Column,
-    Grid,
-    Row,
-    Select,
-    Median,
     Alpha,
     Beta,
-    TextInput,
-    TextArea,
+    Button,
+    Column,
+    FloatingButton,
+    Grid,
     Header,
+    Icon,
+    Median,
+    Row,
+    Select,
+    TextArea,
+    TextInput,
 };
