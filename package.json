@@ -8,7 +8,8 @@
     "start": "start-storybook -p 6006 -c storybook",
     "prepublish": "npm run build",
     "build": "webpack --config webpack.config.js",
-    "start:dev": "watch webpack src/ --interval=3"
+    "start:dev": "watch webpack src/ --interval=3",
+    "create-component": "node scripts/createComponent"
   },
   "repository": {
     "type": "git",

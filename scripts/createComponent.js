@@ -18,12 +18,22 @@ export default ${componentName};`;
 
 const mainFile = `${baseName}.js`;
 const mainContent = `import React from 'react';
+import PropTypes from 'prop-types';
+import css from './${componentName}.scss';
 
 class ${componentName} extends React.Component {
     render() {
         return null;
     }
 }
+
+${componentName}.propTypes = {
+
+};
+
+${componentName}.defaultProps = {
+
+};
 
 export default ${componentName};`;
 

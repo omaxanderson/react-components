@@ -1,0 +1,26 @@
+$small: 30px;
+$medium: 50px;
+$large: 70px;
+$xlarge: 100px;
+
+.Icon {
+  &--small {
+    height: $small;
+    width: $small;
+  }
+
+  &--medium {
+    height: $medium;
+    width: $medium;
+  }
+
+  &--large {
+    height: $large;
+    width: $large;
+  }
+
+  &--xlarge {
+    height: $xlarge;
+    width: $xlarge;
+  }
+}

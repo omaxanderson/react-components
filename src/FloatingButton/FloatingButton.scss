@@ -1,3 +1,40 @@
-.FloatingButton {
+$small: 50px;
+$medium: 70px;
+$large: 90px;
+$xlarge: 100px;
 
+.FloatingButton {
+  background-color: #4c6488;
+  border-radius: 50%;
+  transition: .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  &:hover {
+    background-color: #071b39;
+    box-shadow: 0 0 10px -3px #555;
+    cursor: pointer;
+  }
+
+  &--small {
+    width: $small;
+    height: $small;
+  }
+
+  &--medium {
+    width: $medium;
+    height: $medium;
+  }
+
+  &--large {
+    width: $large;
+    height: $large;
+  }
+
+  &--xlarge {
+    width: $xlarge;
+    height: $xlarge;
+  }
 }
