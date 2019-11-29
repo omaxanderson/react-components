@@ -11,6 +11,7 @@ import TextInput from './TextInput';
 import { Median, Alpha, Beta } from './Median';
 import Popover from './Popover';
 import Menu from './Menu';
+import Switch from './Switch';
 
 export {
     Alpha,
@@ -28,4 +29,5 @@ export {
     TextInput,
     Popover,
     Menu,
+    Switch,
 };

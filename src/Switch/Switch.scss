@@ -1,0 +1,42 @@
+@import '../scss/spacing';
+$width: 40;
+$height: 20;
+$borderRadius: 11;
+
+.Switch {
+  width: $width + px;
+  height: $height + px;
+  border-radius: $borderRadius + px;
+  background-color: #dddddd;
+  border: 1px solid #999999;
+  transition: .5s;
+
+  &--on {
+    background-color: #115346;
+  }
+
+  &--withOffLabel {
+    margin-left: $spacing-md;
+  }
+
+  &--withOnLabel {
+    margin-right: $spacing-md;
+  }
+}
+
+.Switch__thing {
+  width: $height + px;
+  height: $height + px;
+  border-radius: $borderRadius + px;
+  background-color: #ffffff;
+  transition: .5s;
+
+  &--on {
+    transform: translateX(($width / 2) + px);
+  }
+}
+
+.Switch__wrapper {
+  display: flex;
+  align-items: center;
+}
