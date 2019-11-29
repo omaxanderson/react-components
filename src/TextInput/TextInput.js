@@ -28,8 +28,7 @@ class TextInput extends React.Component {
                     if (e.key === 'Enter') {
                         onSubmit(get(this.inputRef, 'current.value', ''));
                     } else {
-                        console.log('calling on change');
-                        onChange(e, get(this.inputRef, 'current.value', ''));
+                        setTimeout(() => onChange(e, get(this.inputRef, 'current.value', ''), 1));
                     }
                 }}
             />
