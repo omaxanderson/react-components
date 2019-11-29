@@ -1,0 +1,25 @@
+@import '../scss/spacing';
+$columns: 12;
+$columnGap: 20px;
+
+.Row {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-column-gap: $columnGap;
+
+  &--spacing-sm {
+    margin-bottom: $spacing-sm;
+  }
+  &--spacing-md {
+    margin-bottom: $spacing-md;
+  }
+  &--spacing-lg {
+    margin-bottom: $spacing-lg;
+  }
+  &--spacing-xl {
+    margin-bottom: $spacing-xl;
+  }
+  &--spacing-xs {
+    margin-bottom: $spacing-xs;
+  }
+}

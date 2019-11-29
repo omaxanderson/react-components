@@ -3,32 +3,45 @@
 .Header {
   margin: 0;
   &--h1 {
-    margin-top: $spacing-lg;
-    margin-bottom: $spacing-lg;
+    margin-top: $spacing-md;
+    margin-bottom: $spacing-md;
   }
 
   &--h2 {
-    margin-top: $spacing-lg;
-    margin-bottom: $spacing-lg;
+    margin-top: $spacing-md;
+    margin-bottom: $spacing-md;
   }
 
   &--h3 {
-    margin-top: $spacing-lg;
-    margin-bottom: $spacing-lg;
+    margin-top: $spacing-sm;
+    margin-bottom: $spacing-sm;
   }
 
   &--h4 {
-    margin-top: $spacing-md;
-    margin-bottom: $spacing-md;
+    margin-top: $spacing-sm;
+    margin-bottom: $spacing-sm;
   }
 
   &--h5 {
-    margin-top: $spacing-md;
-    margin-bottom: $spacing-md;
+    margin-top: $spacing-sm;
+    margin-bottom: $spacing-sm;
   }
 
   &--h6 {
+    margin-top: $spacing-xs;
+    margin-bottom: $spacing-xs;
+  }
+
+  &--sm {
     margin-top: $spacing-sm;
     margin-bottom: $spacing-sm;
+  }
+  &--md {
+    margin-top: $spacing-md;
+    margin-bottom: $spacing-md;
+  }
+  &--lg {
+    margin-top: $spacing-lg;
+    margin-bottom: $spacing-lg;
   }
 }

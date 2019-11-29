@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Grid from '../Grid';
+import Row from '../Row';
 import Column from '../Column';
 import Median from './Median';
 import Alpha from './Alpha';
@@ -32,7 +32,7 @@ stories.add('Large spacing', () => (
 ));
 
 stories.add('In a grid', () => (
-    <Grid>
+    <Row>
         <Column col={6} offset={3}>
             <Median>
                 <Alpha>
@@ -43,7 +43,7 @@ stories.add('In a grid', () => (
                 </Beta>
             </Median>
         </Column>
-    </Grid>
+    </Row>
 ));
 
 stories.add('Vertical Aligned', () => (
