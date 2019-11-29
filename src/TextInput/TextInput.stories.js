@@ -13,3 +13,12 @@ stories.add('With onsubmit', () => (
         console.log('submitted:', e);
     }}/>
 ));
+
+stories.add('With label', () => (
+    <TextInput
+        onSubmit={(e) => {
+            console.log('submitted:', e);
+        }}
+        label="Name"
+    />
+));

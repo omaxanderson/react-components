@@ -1,0 +1,11 @@
+@import '../scss/spacing';
+
+.MenuItem {
+  padding: $spacing-md;
+  cursor: pointer;
+  /* transition: .2s; */
+
+  &:hover {
+    background-color: #eeeeee;
+  }
+}

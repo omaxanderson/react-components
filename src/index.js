@@ -9,7 +9,8 @@ import Select from './Select';
 import TextArea from './TextArea';
 import TextInput from './TextInput';
 import { Median, Alpha, Beta } from './Median';
-import Popover from "./Popover";
+import Popover from './Popover';
+import Menu from './Menu';
 
 export {
     Alpha,
@@ -26,4 +27,5 @@ export {
     TextArea,
     TextInput,
     Popover,
+    Menu,
 };

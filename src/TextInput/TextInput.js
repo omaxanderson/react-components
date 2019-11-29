@@ -9,14 +9,16 @@ class TextInput extends React.Component {
 
         this.inputRef = React.createRef();
     }
-    render() {
+
+    getInput = () => {
         const {
             placeholder,
             onSubmit,
             onChange,
+            label,
         } = this.props;
 
-        return(
+        return (
             <input
                 type="text"
                 placeholder={placeholder}
@@ -31,18 +33,37 @@ class TextInput extends React.Component {
             />
         );
     }
+
+    render() {
+        const {
+            label,
+        } = this.props;
+
+        if (!label) {
+            return this.getInput();
+        }
+
+        return (
+            <div>
+                <div className={css.TextInput__label}>{label}</div>
+                {this.getInput()}
+            </div>
+        )
+    }
 }
 
 TextInput.propTypes = {
     onSubmit: PropTypes.func,
     onChange: PropTypes.func,
     placeholder: PropTypes.string,
+    label: PropTypes.string,
 };
 
 TextInput.defaultProps = {
     onSubmit: () => {},
     onChange: () => {},
     placeholder: '',
+    label: '',
 };
 
 export default TextInput;
