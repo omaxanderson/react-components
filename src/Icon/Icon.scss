@@ -4,6 +4,11 @@ $large: 70px;
 $xlarge: 100px;
 
 .Icon {
+
+  &--hover:hover {
+    color: white;
+  }
+
   &--small {
     height: $small;
     width: $small;

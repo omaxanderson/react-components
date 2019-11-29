@@ -45,6 +45,7 @@
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
+    "uuid": "^3.3.3",
     "webpack-delete-after-emit": "^1.0.5"
   },
   "devDependencies": {

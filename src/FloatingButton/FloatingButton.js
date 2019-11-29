@@ -10,12 +10,16 @@ class FloatingButton extends React.Component {
             icon,
             children,
             size,
+            light,
+            onClick,
         } = this.props;
         return (
             <div
                 className={classNames(css.FloatingButton, {
                     [css[`FloatingButton--${size}`]]: size,
+                    [css['FloatingButton--light']]: light,
                 })}
+                onClick={onClick}
             >
                 {icon && <Icon name={icon} />}
                 {children}
@@ -28,11 +32,15 @@ FloatingButton.propTypes = {
     icon: PropTypes.string,
     children: PropTypes.node,
     size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
+    light: PropTypes.bool,
+    onClick: PropTypes.func,
 };
 
 FloatingButton.defaultProps = {
     icon: '',
     size: 'medium',
+    light: false,
+    onClick: () => {},
 };
 
 export default FloatingButton;

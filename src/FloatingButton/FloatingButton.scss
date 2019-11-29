@@ -18,6 +18,17 @@ $xlarge: 100px;
     cursor: pointer;
   }
 
+  &--light {
+    color: black;
+    background-color: white;
+
+    &:hover {
+      background-color: #ddd;
+      color: white;
+      box-shadow: 0 0 10px -3px #555;
+    }
+  }
+
   &--small {
     width: $small;
     height: $small;

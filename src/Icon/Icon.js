@@ -15,15 +15,17 @@ class Icon extends React.Component {
             name,
             size,
             color,
+            hover,
         } = this.props;
         const Svg = svgs[name];
 
         return (
             <div
+                style={color ? { fill: color } : undefined}
                 className={classNames(css.Icon, {
                     [css[`Icon--${size}`]]: size,
+                    [css['Icon--hover']]: hover,
                 })}
-                style={color ? { fill: color } : undefined}
             >
                 <Svg />
             </div>
@@ -35,11 +37,13 @@ Icon.propTypes = {
     name: PropTypes.oneOf(Object.values(svgs)).isRequired,
     size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
     color: PropTypes.string,
+    hover: PropTypes.bool,
 };
 
 Icon.defaultProps = {
     size: 'medium',
     color: false,
+    hover: false,
 };
 
 export default Icon;

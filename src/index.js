@@ -9,6 +9,7 @@ import Select from './Select';
 import TextArea from './TextArea';
 import TextInput from './TextInput';
 import { Median, Alpha, Beta } from './Median';
+import Popover from "./Popover";
 
 export {
     Alpha,
@@ -24,4 +25,5 @@ export {
     Select,
     TextArea,
     TextInput,
+    Popover,
 };

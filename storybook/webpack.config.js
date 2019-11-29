@@ -10,7 +10,9 @@ module.exports = async ({ config, mode }) => {
             loader: 'css-loader',
             options: {
                sourceMap: isDevelopment,
-               modules: true,
+               modules: {
+                  localIdentName: '[local]__[hash:base64:6]',
+               },
             },
          },
          {

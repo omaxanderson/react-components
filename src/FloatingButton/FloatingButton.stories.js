@@ -28,3 +28,9 @@ stories.add('With Icon', () => (
         <Icon name="add2" color="white" size="small" />
     </FloatingButton>
 ));
+
+stories.add('light Icon', () => (
+    <FloatingButton light>
+        <Icon name="add2" size="small" />
+    </FloatingButton>
+));

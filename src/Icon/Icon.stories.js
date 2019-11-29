@@ -20,3 +20,6 @@ stories.add('Large', () => (
     <Icon name="add" size="large"/>
 ));
 
+stories.add('hover', () => (
+    <Icon name="add" hover />
+));
