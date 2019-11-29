@@ -27,9 +27,11 @@ class TextInput extends React.Component {
                 onKeyDown={(e) => {
                     if (e.key === 'Enter') {
                         onSubmit(get(this.inputRef, 'current.value', ''));
+                    } else {
+                        console.log('calling on change');
+                        onChange(e, get(this.inputRef, 'current.value', ''));
                     }
                 }}
-                onchange={() => onChange(get(this.inputRef, 'current.value', ''))}
             />
         );
     }

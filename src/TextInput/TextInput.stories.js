@@ -14,6 +14,12 @@ stories.add('With onsubmit', () => (
     }}/>
 ));
 
+stories.add('With onChange', () => (
+    <TextInput onChange={(e, value) => {
+        console.log('submitted:', value);
+    }}/>
+));
+
 stories.add('With label', () => (
     <TextInput
         onSubmit={(e) => {
