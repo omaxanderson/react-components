@@ -12,6 +12,7 @@ import { Median, Alpha, Beta } from './Median';
 import Popover from './Popover';
 import Menu from './Menu';
 import Switch from './Switch';
+import Align from './Align';
 
 export {
     Alpha,
@@ -30,4 +31,5 @@ export {
     Popover,
     Menu,
     Switch,
+    Align,
 };
