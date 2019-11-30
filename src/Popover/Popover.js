@@ -24,6 +24,12 @@ class Popover extends React.Component {
         document.removeEventListener('click', this.onPageClick);
     }
 
+    static getDerivedStateFromProps(props, state) {
+        if (props.isOpen !== undefined && props.isOpen !== state.isOpen) {
+            return { isOpen: props.isOpen };
+        }
+    }
+
     onPageClick = (e) => {
         const trigger = ReactDOM.findDOMNode(this.triggerNode);
         const tooltip = ReactDOM.findDOMNode(this.childrenNode);
@@ -46,12 +52,13 @@ class Popover extends React.Component {
 
     render() {
         const {
-            isOpen,
+            isOpen: stateIsOpen,
         } = this.state;
 
         const {
             children,
             onHover,
+            isOpen: propsIsOpen,
         } = this.props;
 
         const [trigger, ...rest] = children;
@@ -67,7 +74,7 @@ class Popover extends React.Component {
                         ref: (node) => this.triggerNode = node,
                     },
                 )}
-                {isOpen &&
+                {(propsIsOpen === undefined ? stateIsOpen : propsIsOpen) &&
                     <div
                         ref={(node) => this.childrenNode = node}
                         className={css.Popover}
@@ -85,7 +92,7 @@ Popover.propTypes = {
 };
 
 Popover.defaultProps = {
-    isOpen: false,
+    isOpen: undefined,
 };
 
 export default Popover;

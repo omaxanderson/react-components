@@ -7,16 +7,34 @@ class TextInput extends React.Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            value: props.value || '',
+        };
+
         this.inputRef = React.createRef();
     }
+
+    static getDerivedStateFromProps(props, state) {
+        if (props.value !== undefined && state.value !== props.value) {
+            return { value: props.value };
+        }
+        return null;
+    }
+
+    onChange = (e) => {
+        const { onChange } = this.props;
+        const { value } = e.target;
+        this.setState({ value }, () => onChange(e, value));
+    };
 
     getInput = () => {
         const {
             placeholder,
             onSubmit,
-            onChange,
-            label,
+            ...props
         } = this.props;
+
+        //const { value } = this.state;
 
         return (
             <input
@@ -24,16 +42,16 @@ class TextInput extends React.Component {
                 placeholder={placeholder}
                 className={css.TextInput}
                 ref={this.inputRef}
+                {...props}
+                onChange={this.onChange}
                 onKeyDown={(e) => {
                     if (e.key === 'Enter') {
                         onSubmit(get(this.inputRef, 'current.value', ''));
-                    } else {
-                        setTimeout(() => onChange(e, get(this.inputRef, 'current.value', ''), 1));
                     }
                 }}
             />
         );
-    }
+    };
 
     render() {
         const {
@@ -58,6 +76,7 @@ TextInput.propTypes = {
     onChange: PropTypes.func,
     placeholder: PropTypes.string,
     label: PropTypes.string,
+    value: PropTypes.string,
 };
 
 TextInput.defaultProps = {
@@ -65,6 +84,7 @@ TextInput.defaultProps = {
     onChange: () => {},
     placeholder: '',
     label: '',
+    value: undefined,
 };
 
 export default TextInput;
