@@ -46,7 +46,6 @@ class Popover extends React.Component {
     };
 
     onTriggerClick = () => {
-        console.log('trigger click');
         this.setState({ isOpen: !this.state.isOpen });
     };
 

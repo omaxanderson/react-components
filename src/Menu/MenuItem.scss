@@ -3,7 +3,7 @@
 .MenuItem {
   padding: $spacing-md;
   cursor: pointer;
-  /* transition: .2s; */
+  white-space: nowrap;
 
   &:hover {
     background-color: #eeeeee;

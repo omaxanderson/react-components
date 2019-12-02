@@ -24,12 +24,14 @@ class Select extends React.Component {
 Select.propTypes = {
     onChange: propTypes.func,
     children: propTypes.node,
+    defaultValue: propTypes.any,
     value: propTypes.any,
 };
 
 Select.defaultProps = {
     onChange: () => {},
     children: undefined,
+    defaultValue: undefined,
     value: undefined,
 }
 
