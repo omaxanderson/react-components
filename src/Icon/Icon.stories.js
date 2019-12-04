@@ -13,11 +13,11 @@ stories.add('Add2', () => (
 ));
 
 stories.add('Small', () => (
-    <Icon name="add" size="small"/>
+    <Icon name="add" size="sm"/>
 ));
 
 stories.add('Large', () => (
-    <Icon name="add" size="large"/>
+    <Icon name="add" size="lg"/>
 ));
 
 stories.add('hover', () => (

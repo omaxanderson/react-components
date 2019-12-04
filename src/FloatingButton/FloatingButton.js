@@ -13,15 +13,21 @@ class FloatingButton extends React.Component {
             light,
             onClick,
         } = this.props;
+        const t = classNames(css.FloatingButton, {
+            [css[`FloatingButton--${size}`]]: size,
+            [css['FloatingButton--light']]: light,
+        });
+        console.log('t', t);
         return (
             <div
+                {...this.props /* allowing things like style to be passed through */}
                 className={classNames(css.FloatingButton, {
                     [css[`FloatingButton--${size}`]]: size,
                     [css['FloatingButton--light']]: light,
                 })}
                 onClick={onClick}
             >
-                {icon && <Icon name={icon} />}
+                {icon && <Icon name={icon} size={size} />}
                 {children}
             </div>
         );
@@ -31,14 +37,14 @@ class FloatingButton extends React.Component {
 FloatingButton.propTypes = {
     icon: PropTypes.string,
     children: PropTypes.node,
-    size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
+    size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
     light: PropTypes.bool,
     onClick: PropTypes.func,
 };
 
 FloatingButton.defaultProps = {
     icon: '',
-    size: 'medium',
+    size: 'md',
     light: false,
     onClick: () => {},
 };

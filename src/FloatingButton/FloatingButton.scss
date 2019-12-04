@@ -11,6 +11,7 @@ $xlarge: 100px;
   align-items: center;
   justify-content: center;
   color: white;
+  fill: white;
 
   &:hover {
     background-color: #071b39;
@@ -20,6 +21,7 @@ $xlarge: 100px;
 
   &--light {
     color: black;
+    fill: black;
     background-color: white;
 
     &:hover {
@@ -29,22 +31,22 @@ $xlarge: 100px;
     }
   }
 
-  &--small {
+  &--sm {
     width: $small;
     height: $small;
   }
 
-  &--medium {
+  &--md {
     width: $medium;
     height: $medium;
   }
 
-  &--large {
+  &--lg {
     width: $large;
     height: $large;
   }
 
-  &--xlarge {
+  &--xl {
     width: $xlarge;
     height: $xlarge;
   }

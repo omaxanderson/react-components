@@ -4,8 +4,15 @@ $columnGap: 20px;
 
 .Row {
   display: grid;
-  grid-template-columns: repeat($columns, 1fr);
+  grid-template-columns: repeat($columns, [col] 1fr);
   grid-column-gap: $columnGap;
+
+  @media (max-width: 600px) {
+    &--withSidePadding {
+      padding-left: $columnGap;
+      padding-right: $columnGap;
+    }
+  }
 
   &--spacing-sm {
     margin-bottom: $spacing-sm;

@@ -1,7 +1,36 @@
+$sm: 0px;
+$md: 601px;
+$lg: 1001px;
+
+$sizes: (
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+);
+
 @mixin col-x-list {
   @for $i from 1 through 12 {
-    .col-#{$i}-sm { grid-column: span $i; }
+    .col-#{$i} { grid-column: span $i; }
   }
 }
 
 @include col-x-list;
+
+.Column {
+  @each $label, $size in $sizes {
+    @media (min-width: $size) {
+      @for $i from 1 through 12 {
+        &--col-#{$label}-#{$i} {
+          grid-column: span $i;
+        }
+      }
+      @for $i from 1 through 12 {
+        @for $j from 1 through 12 {
+          &--col-#{$label}-#{$i}-offset-#{$j} {
+            grid-column: col #{$j + 1} / span $i;
+          }
+        }
+      }
+    }
+  }
+}

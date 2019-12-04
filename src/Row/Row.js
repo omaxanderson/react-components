@@ -4,11 +4,17 @@ import classNames from 'classnames';
 import css from './Row.scss';
 
 const Row = (props) => {
-    const { children, spacing } = props;
+    const {
+        children,
+        spacing,
+        withSidePadding,
+    } = props;
+    // TODO somehow add up and make the sizes exact from relative?
     return (
         <div
             className={classNames(css.Row, {
                 [css[`Row--spacing-${spacing}`]]: spacing,
+                [css['Row--withSidePadding']]: withSidePadding,
             })}
         >
             {children}
@@ -19,10 +25,12 @@ const Row = (props) => {
 Row.propTypes = {
     children: PropTypes.node.isRequired,
     spacing: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+    withSidePadding: PropTypes.bool,
 };
 
 Row.defaultProps = {
-    spacing: undefined,
+    spacing: 'md',
+    withSidePadding: true,
 };
 
 export default Row;
