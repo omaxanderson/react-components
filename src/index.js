@@ -12,6 +12,7 @@ import Popover from './Popover';
 import Menu from './Menu';
 import Switch from './Switch';
 import Align from './Align';
+import Modal from './Modal';
 
 export {
     Alpha,
@@ -30,4 +31,5 @@ export {
     Menu,
     Switch,
     Align,
+    Modal,
 };

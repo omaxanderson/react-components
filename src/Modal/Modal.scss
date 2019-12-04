@@ -1,7 +1,8 @@
+@import '../scss/spacing';
 $grey: 44;
 
 .Modal__wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -16,4 +17,45 @@ $grey: 44;
   width: 67%;
   height: 67%;
   background-color: white;
+  display: grid;
+  grid-template-rows: [row1] 20% [row2] auto [row3] 20%;
+}
+
+.Modal__header {
+  grid-row: row1;
+  background-color: yellow;
+  width: 100%;
+}
+
+.Modal__footer {
+  background-color: red;
+  grid-row: row3;
+  width: 100%;
+}
+
+.Modal__footerButton button:not(:first-child) {
+  margin-left: $spacing-md;
+}
+
+.Modal__content {
+  max-height: 100px;
+  overflow: scroll;
+}
+
+.Modal__footerButton {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.Modal__footerButtonWrapper {
+  float: right;
+  height: 100%;
+  margin-right: $spacing-md;
+}
+
+.Modal__footerButtonWrapper2 {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }

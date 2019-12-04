@@ -9,13 +9,28 @@
 }
 
 .Median__sm {
-  padding: $spacing-sm;
+  padding-top: $spacing-sm;
+  padding-bottom: $spacing-sm;
+  &--horizontalSpacing {
+    padding-left: $spacing-sm;
+    padding-right: $spacing-sm;
+  }
 }
 
 .Median__md {
-  padding: $spacing-md;
+  padding-top: $spacing-md;
+  padding-bottom: $spacing-md;
+  &--horizontalSpacing {
+    padding-left: $spacing-md;
+    padding-right: $spacing-md;
+  }
 }
 
 .Median__lg {
-  padding: $spacing-lg;
+  padding-top: $spacing-lg;
+  padding-bottom: $spacing-lg;
+  &--horizontalSpacing {
+    padding-left: $spacing-lg;
+    padding-right: $spacing-lg;
+  }
 }

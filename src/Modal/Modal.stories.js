@@ -6,7 +6,31 @@ import Modal from './Modal';
 const stories = storiesOf('Components/Modal', module);
 stories.addDecorator(withKnobs);
 
-stories.add('Default', () => (
+stories.add('Prop controlled', () => (
     <Modal isOpen={boolean('Is Open', false)}/>
+));
+
+stories.add('Self managed', () => (
+    <Modal />
+));
+
+stories.add('With header and footer', () => (
+    <Modal
+        header="My Modal"
+        footerActions={[
+            {
+                label: 'Cancel',
+                type: 'secondary',
+                onClick: () => console.log('clicked cancel :('),
+            },
+            {
+                label: 'Submit',
+                type: 'primary',
+                onClick: () => console.log('clicked!'),
+            },
+        ]}
+    >
+        <div>Hey!</div>
+    </Modal>
 ));
 
