@@ -19,6 +19,7 @@ export default ${componentName};`;
 const mainFile = `${baseName}.js`;
 const mainContent = `import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import css from './${componentName}.scss';
 
 class ${componentName} extends React.Component {

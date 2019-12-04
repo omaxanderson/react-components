@@ -1,0 +1,19 @@
+$grey: 44;
+
+.Modal__wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($grey, $grey, $grey, .7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Modal__container {
+  width: 67%;
+  height: 67%;
+  background-color: white;
+}
