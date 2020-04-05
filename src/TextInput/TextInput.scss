@@ -1,13 +1,12 @@
 @import '../scss/spacing';
 
 .TextInput {
-  padding: $spacing-md;
+  padding: $spacing-sm;
   border-radius: 3px;
   border: 1px solid #ccc;
   outline: none;
-  background-color: #7488a5;
-  color: white;
-  transition: .5s;
+  background-color: #eeeeee;
+  transition: .3s;
   width: 100%;
   box-sizing: border-box;
 
