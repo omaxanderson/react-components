@@ -13,24 +13,53 @@ $grey: 44;
   align-items: center;
 }
 
-.Modal__container {
-  width: 67%;
-  height: 67%;
+@mixin modal-container {
   background-color: white;
-  display: grid;
-  grid-template-rows: [row1] 20% [row2] auto [row3] 20%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.Modal__container {
+  @include modal-container;
+  &--large {
+    @include modal-container;
+    width: 70%;
+    min-height: 70%;
+  }
+
+  &--medium {
+    @include modal-container;
+    width: 50%;
+    min-height: 50%;
+  }
+
+  &--small {
+    @include modal-container;
+    width: 30%;
+    height: 40%;
+  }
 }
 
 .Modal__header {
-  grid-row: row1;
-  background-color: yellow;
+  border-bottom: 1px solid #ccc;
+  padding: $spacing-md;
   width: 100%;
+  box-sizing: border-box;
+
+  & > h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .Modal__footer {
-  background-color: red;
-  grid-row: row3;
+  border-top: 1px solid #ccc;
   width: 100%;
+  padding: $spacing-md;
+  // position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
 }
 
 .Modal__footerButton button:not(:first-child) {
@@ -38,8 +67,10 @@ $grey: 44;
 }
 
 .Modal__content {
-  max-height: 100px;
+  // max-height: 100px;
+  flex-grow: 9999;
   overflow: scroll;
+  padding: $spacing-md;
 }
 
 .Modal__footerButton {

@@ -48,6 +48,7 @@ class Modal extends React.Component {
             isOpen: propsIsOpen,
             header,
             footerActions,
+            size,
         } = this.props;
 
         const {
@@ -59,15 +60,29 @@ class Modal extends React.Component {
             return null;
         }
 
+        console.log({
+            [css['Modal__container--small']]: size === 'sm',
+            [css['Modal__container--medium']]: size === 'md',
+            [css['Modal__container--large']]: size === 'lg',
+        });
+
         return (
             <div
                 className={classNames(css.Modal__wrapper)}
             >
                 <div
-                    className={classNames(css.Modal__container)}
+                    className={classNames(css.Modal__container, {
+                        [css['Modal__container--small']]: size === 'sm',
+                        [css['Modal__container--medium']]: size === 'md',
+                        [css['Modal__container--large']]: size === 'lg',
+                    })}
                     ref={node => this.modalRef = node}
                 >
-                    {header && <div className={classNames(css.Modal__header)}>{header}</div>}
+                    {header &&
+                        <div className={classNames(css.Modal__header)}>
+                            <h2> {header} </h2>
+                        </div>
+                    }
                     <div className={css.Modal__content}>{children}</div>
                     <div className={css.Modal__footer}>
                         <div className={css.Modal__footerButtonWrapper}>
@@ -97,6 +112,7 @@ Modal.propTypes = {
         label: PropTypes.string,
         onClick: PropTypes.func,
     })),
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
 };
 
 Modal.defaultProps = {
@@ -104,6 +120,7 @@ Modal.defaultProps = {
     onClose: () => {},
     footerActions: [],
     header: '',
+    size: 'md',
 };
 
 export default Modal;

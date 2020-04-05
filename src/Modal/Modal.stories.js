@@ -34,3 +34,47 @@ stories.add('With header and footer', () => (
     </Modal>
 ));
 
+stories.add('Small modal', () => (
+    <Modal
+        header="My Modal"
+        size="sm"
+        footerActions={[
+            {
+                label: 'Cancel',
+                type: 'secondary',
+                onClick: () => console.log('clicked cancel :('),
+            },
+            {
+                label: 'Submit',
+                type: 'primary',
+                onClick: () => console.log('clicked!'),
+            },
+        ]}
+    >
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+        <div>Hey!</div>
+    </Modal>
+));
+
