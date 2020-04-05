@@ -29,13 +29,17 @@ class Modal extends React.Component {
     onPageClick = (e) => {
         const { target } = e;
         const { isOpen } = this.state;
-        const { onClose } = this.props;
 
         const modal = ReactDOM.findDOMNode(this.modalRef);
 
         if (isOpen && !modal.contains(target)) {
-            this.setState({ isOpen: false }, onClose);
+            this.closeModal();
         }
+    };
+
+    closeModal = () => {
+        const { onClose } = this.props;
+        this.setState({ isOpen: false }, onClose);
     };
 
     render() {
