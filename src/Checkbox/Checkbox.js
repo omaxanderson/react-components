@@ -27,11 +27,13 @@ export default class Checkbox extends React.Component {
         const {
             checked,
             label,
+            value,
         } = this.props;
 
         const inputProps = {
+            value,
             type: 'checkbox',
-            id: `checkbox_${label}`,
+            id: value,
             onChange: this.onChange,
             ref: this.inputRef,
             className: style.Checkbox__Hidden,
@@ -50,7 +52,7 @@ export default class Checkbox extends React.Component {
                 })}>
                     {isChecked && <div className={style.Check} />}
                 </div>
-                {label && <label className={style.Checkbox__Label} htmlFor={`checkbox_${label}`}>{label}</label>}
+                {label && <label className={style.Checkbox__Label} htmlFor={value}>{label}</label>}
             </div>
         )
     }
