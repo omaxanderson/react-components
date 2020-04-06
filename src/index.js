@@ -13,7 +13,7 @@ import Menu from './Menu';
 import Switch from './Switch';
 import Align from './Align';
 import Modal from './Modal';
-import * as Input from './Input';
+import Checkbox from './Checkbox';
 
 export {
     Alpha,
@@ -33,5 +33,5 @@ export {
     Switch,
     Align,
     Modal,
-    Input,
+    Checkbox,
 };

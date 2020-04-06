@@ -126,7 +126,7 @@ const mainConfig = {
   ],
   output: {
      path: path.resolve(__dirname, 'dist'),
-     filename: 'Input.stories.js',
+     filename: 'index.js',
      library: '@omaxwellanderson/react-components',
      libraryTarget: 'umd',
   },
