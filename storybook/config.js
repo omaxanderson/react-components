@@ -4,6 +4,7 @@ import infoAddon from '@storybook/addon-info';
 setAddon(infoAddon);
 
 const dynamicLoadedStories = require.context('../src', true, /\.stories\.js$/);
+console.log('dynamic', dynamicLoadedStories);
 function loadStories() {
   // Dynamic
   dynamicLoadedStories.keys().map(dynamicLoadedStories);

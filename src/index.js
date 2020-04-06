@@ -13,6 +13,7 @@ import Menu from './Menu';
 import Switch from './Switch';
 import Align from './Align';
 import Modal from './Modal';
+import * as Input from './Input';
 
 export {
     Alpha,
@@ -32,4 +33,5 @@ export {
     Switch,
     Align,
     Modal,
+    Input,
 };

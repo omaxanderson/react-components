@@ -1,0 +1,46 @@
+@import '../../scss/spacing';
+
+$checkbox-size: 18px;
+$checkbox-transition: .1s ease-in;
+
+.Checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $checkbox-size;
+  width: $checkbox-size;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid #1bab80;
+  transition: $checkbox-transition;
+
+  &__Checked {
+    background-color: #1bab80;
+    transition: $checkbox-transition;
+  }
+
+  &__Hidden {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__Wrapper {
+    display: flex;
+  }
+
+  &__Label {
+    margin-left: $spacing-sm;
+    align-self: center;
+  }
+}
+
+.Check {
+  height: 30%;
+  width: 70%;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  transform: rotate(-45deg)  translateY(-1px) translateX(1px);
+  transition: $checkbox-transition;
+}
