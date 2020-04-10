@@ -60,12 +60,6 @@ class Modal extends React.Component {
             return null;
         }
 
-        console.log({
-            [css['Modal__container--small']]: size === 'sm',
-            [css['Modal__container--medium']]: size === 'md',
-            [css['Modal__container--large']]: size === 'lg',
-        });
-
         return (
             <div
                 className={classNames(css.Modal__wrapper)}

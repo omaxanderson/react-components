@@ -18,8 +18,6 @@ class Icon extends React.Component {
             hover,
         } = this.props;
         const Svg = svgs[name];
-        console.log(css);
-        console.log(size);
 
         return (
             <div

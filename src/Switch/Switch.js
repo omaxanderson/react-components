@@ -13,7 +13,6 @@ class Switch extends React.Component {
     }
 
     onClick = () => {
-        console.log('hey');
         const { value } = this.state;
         const { onChange } = this.props;
         this.setState({ value: !value }, () => onChange(this.state.value));

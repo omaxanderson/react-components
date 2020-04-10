@@ -11,13 +11,33 @@ $horizontal: 1.3rem;
 
   &:hover {
     cursor: pointer;
-    background-color: #183155;
-    color: white;
-    border-color: #7488a5;
   }
-  &:focus {
-    background-color: #183155;
+
+  &__Secondary {
+    &:hover {
+      background-color: #183155;
+      color: white;
+      border-color: #7488a5;
+    }
+    &:focus {
+      background-color: #183155;
+      color: white;
+    }
+  }
+
+  &__Primary {
+    @extend .Button;
+    background-color: #1a527a;
     color: white;
+
+    &:hover {
+      background-color: #183155;
+    }
+  }
+
+  &__Disabled {
+    @extend .Button;
+    color: #bbb;
   }
 }
 

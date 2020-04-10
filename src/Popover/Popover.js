@@ -40,7 +40,6 @@ class Popover extends React.Component {
         const { target } = e;
         const { isOpen } = this.state;
         if (isOpen && !trigger.contains(target) && !tooltip.contains(target)) {
-            console.log('closing');
             this.setState({ isOpen: false });
         }
     };

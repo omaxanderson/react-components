@@ -17,7 +17,6 @@ class FloatingButton extends React.Component {
             [css[`FloatingButton--${size}`]]: size,
             [css['FloatingButton--light']]: light,
         });
-        console.log('t', t);
         return (
             <div
                 {...this.props /* allowing things like style to be passed through */}

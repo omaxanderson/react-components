@@ -30,11 +30,11 @@ Header.propTypes = {
     children: PropTypes.node.isRequired,
     spacing: PropTypes.oneOf(['sm', 'md', 'lg']),
     noSpacing: PropTypes.bool,
-}
+};
 
 Header.defaultProps = {
     spacing: undefined,
     noSpacing: false,
-}
+};
 
 export default Header;
